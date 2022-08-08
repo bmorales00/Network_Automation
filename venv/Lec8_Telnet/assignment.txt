@@ -1,0 +1,5 @@
+Switch:20.0.1.1:admin:jhdfG743hNvgm
+Router1:78.2.1.1:user1:KMRGLmfdgdf2
+Router2:89.0.0.1:root:R93KLJnmfjofe
+Server1:90.0.0.1:u1:ZADPQUR752nhvdv
+Server2:10.1.1.1:myadmin:PPPnsnvnHH

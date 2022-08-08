@@ -1,0 +1,10 @@
+Hostname,IPAddress,Location
+Gordon,192.168.1.2,Class106
+Joe,192.168.1.69,Class15
+ServerA,192.168.1.45,Office1
+ServerCSN,192.168.1.88,Class10
+ServerB,192.168.1.6,Class108
+WINPC-321,192.168.1.23,Class10
+WINPC-123,192.168.1.5,Server Room A
+WINPC-0,192.168.1.21,Server Room B
+WINPC-111,192.168.1.221,Class106
