@@ -1,3 +1,4 @@
+import netmiko
 from netmiko import ConnectHandler
 
 connection_device = {
@@ -11,7 +12,6 @@ connection_device = {
     }
 
 connection = ConnectHandler(**connection_device)
-
 connection.enable()
 
 commands = ['int loopback 1',
@@ -29,6 +29,5 @@ output = connection.send_command_expect('sh run')
 # perfect for commands with large outputs like 'show run'
 
 print(output)
-
 connection.disconnect()
 

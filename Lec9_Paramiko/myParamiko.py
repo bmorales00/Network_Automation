@@ -29,7 +29,7 @@ def result(client, n =10000):
     return output.decode()
 
 def close(ssh_client):
-    if ssh_client.get_transport().is_active() == True:
+    if ssh_client.get_transport().is_active():
         ssh_client.close()
 
 
@@ -77,4 +77,36 @@ for ipadd in routers:
     output = result(client)
     print(output)
 """
+
+# import paramiko
+# import time
+# import getpass
+# from datetime import datetime
+
+# hostname = "10.1.1.10"
+# username = "csn"
+# password = getpass.getpass()
+# port = 22
+#
+# ssh_client = paramiko.SSHClient()
+# ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+#
+# router = {"hostname": "10.1.1.10", "port": 22, "username": "csn", "password": password}
+# ssh_client.connect(**router, allow_agent=False, look_for_keys=False)
+# status = ssh_client.get_transport()
+#
+# if status.is_active():
+#     shell = ssh_client.invoke_shell()
+#     shell.send(b'enable\n')
+#     shell.send(router["password"].encode() + b'\n')
+#     shell.send(b'terminal length 0\n')
+#     shell.send(b'show version\n')
+#     time.sleep(1)
+#
+#     bResult = shell.recv(10000)
+#     sResult = bResult.decode('utf-8')
+#     print(sResult)
+#
+# ssh_client.close()
+
 

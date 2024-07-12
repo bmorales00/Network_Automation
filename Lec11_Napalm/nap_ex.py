@@ -148,3 +148,27 @@ print(ios.get_interfaces_ip())
 ios.close()
 
 """
+
+"""
+from napalm import get_network_driver
+
+_vendor = "ios"
+_hostname = "10.1.1.20"
+_username = "csn"
+_password = "cisco"
+opt_args = {"secret": _password, "dest_file_system": "nvram:"}
+
+ios_device = get_network_driver(_vendor)
+
+driver = ios_device(hostname=_hostname, password=_password, username=_username, optional_args=opt_args)
+
+driver.open()
+
+
+_config = "test-config.txt"
+
+driver.load_merge_candidate(_config)
+print(driver.compare_config())
+driver.discard_config()
+
+"""

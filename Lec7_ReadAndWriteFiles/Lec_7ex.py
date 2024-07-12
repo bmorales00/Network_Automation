@@ -174,14 +174,14 @@ import csv
 
 #Reader
 csv.register_dialect('Msign', delimiter='$', quoting=csv.QUOTE_NONE, lineterminator='\n')
-with open('dialect', 'r') as f:
-    reader = csv.reader(f, dialect='Msign')
+with open('dialect.csv', 'r') as f:
+    reader = csv.reader(f, dialect.csv='Msign')
     for row in reader:
         print(row)
 
 #Writer
-with open('dialect', 'a') as csvfile:
-    writer = csv.writer(csvfile, dialect='Msign', lineterminator='\n')
+with open('dialect.csv', 'a') as csvfile:
+    writer = csv.writer(csvfile, dialect.csv='Msign', lineterminator='\n')
     writer.writerow(('Root Beer', '5.00' ,'32-oz'))
 
 ############################################################

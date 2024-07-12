@@ -18,10 +18,12 @@ print('Entering enable mode ...')
 connection.enable()
 
 
+
 command = ['exit',
            'sh ip protocols',
            'sh run'
 ]
+
 output = connection.send_config_set(command)
 #print(output)
 
